@@ -1,0 +1,13 @@
+.btn {
+  border: none;
+  background-color: transparent;
+  padding: 1.2em;
+  border-radius: 6px;
+  @media#{$large}{
+    padding: 1.71em;
+  }
+}
+
+.btn__filled--primary {
+  background-color: $primary;
+}

@@ -1,0 +1,107 @@
+.header-search__wrapper {
+  background: url('../img/header/header-search__background-img.jpg') center center no-repeat;
+  background-size: cover;
+  height: 80vh;
+  min-height: 690px;
+  padding: 2em 0;
+  @media#{$large}{
+    height: 30vh;
+    max-height: 400px;
+    min-height: auto;
+    padding: 2em 0 6em;
+  }
+  .header-search__title {
+    text-align: center;
+    margin-bottom: var(--space-md);
+  }
+  .header-search__controlls {
+    margin-bottom: var(--space-sm);
+    text-align: center;
+    .controlls__item {
+      text-transform: uppercase;
+      color: $white;
+      padding: 0;
+      &:not(:last-of-type) {
+       padding-right: 1.5em;
+      }
+    }
+  }
+  .header-search__search {
+    background-color: $white;
+    border-radius: 6px;
+  }
+}
+
+.search-form__container{
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  @media#{$large}{
+    flex-wrap: nowrap;
+    padding-left: 1em;
+  }
+  .input__container, .search-button__container {
+    display: inline-flex;
+    flex-wrap: wrap;
+    align-content: center;
+    width: 100%;
+    @media#{$large}{
+      width: auto;
+    }
+  }
+  .input__container {
+    padding: 1em;
+    width: 100%;
+    box-sizing: border-box;
+    @media#{$large}{
+      width: auto;
+      padding: .5em 1em .5em 1em;
+    }
+    &:not(:nth-child(4)) {
+      border-bottom: 1px solid rgba($gray, .1);
+      @media#{$large}{
+        border-bottom: none;
+        border-right: 1px solid rgba($gray, .1);
+      }
+    }
+    label.input__label {
+      text-transform: uppercase;
+      font-size: 0.8rem;
+      line-break: 1.2;
+      color: $gray;
+    }
+    input.input__item {
+      border: none;
+      width: 90%;
+      height: 1.5rem;
+    }
+  }
+  .search-button__container {
+    margin-top: var(--space-normal);
+    width: 100%;
+    @media#{$large}{
+      margin-top: auto;
+      width: auto;
+    }
+    .btn__filled--primary {
+      width: 100%;
+      border-radius: 0 0 6px  6px;
+      @media#{$large}{
+        width: auto;   
+        border-radius: 0 6px 6px 0;
+      }
+      img {
+        width: 1.5em;
+        margin: 0 auto;
+        @media#{$large}{
+          margin: auto;
+        }
+      }
+    }
+  }
+  .input__container {
+    .input__label, .input__item {
+      display: block;
+    }
+  }
+}

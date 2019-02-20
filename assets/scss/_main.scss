@@ -1,0 +1,192 @@
+.result__container {
+  background-color: $white;
+  border-radius: 6px;
+  margin-top: var(--space-normal);
+  .graph__nav  {
+    border-bottom: 1px solid rgba($gray, 0.1);
+    box-sizing: border-box;
+    @media#{$large}{
+      padding: 0 6em 0 9em;
+    }
+    .graph__cell {
+      width: 10em;
+      text-align: center;
+      padding: 1em 0;
+      &.is-selected {
+        border-bottom: 2px solid $other-price;
+        font-weight: 600;
+        color: $other-price;
+      }
+    }
+  }
+  .graph__main {
+    .graph__cell {
+      width: 100%;
+      display: flex;
+      align-content: flex-end;
+      @media#{$large}{
+        height: 312px;
+      }
+    }
+  }
+}
+.flickity-prev-next-button {
+  height: 24px;
+  width: 24px;
+}
+
+.graph__wrapper {
+  width: 100%; 
+  box-sizing: border-box;
+  position: relative;
+  @media#{$large}{
+    padding: 0 6em 0 9em;
+  }
+}
+
+.graph__container {
+  display: grid;
+  padding: var(--space-normal);
+  margin-bottom: var(--space-lg);
+  grid-auto-columns: auto; 
+  grid-template-rows: repeat(31, 1fr);
+  grid-row-gap: 0.8em;
+  grid-template-areas: 
+  "D1 D1 D1 D1 D1 ."
+  "D2 D2 D2 D2 D2 ."
+  "D3 D3 D3 D3 . ."
+  "D4 D4 D4 D4 . ."
+  "D5 D5 . . . ."
+  "D6 . . . . ."
+  "D7 D7 D7 . . ."
+  "D8 D8 D8 . . ."
+  "D9 D9 D9 D9 . ."
+  "D10 D10 D10 D10 . ."
+  "D11 D11 D11 D11 . ."
+  "D12 D12 D12 D12 . ."
+  "D13 D13 . . . ."
+  "D14 . . . . ."
+  "D15 D15 D15 . . ."
+  "D16 D16 D16 D16 . ."
+  "D17 D17 D17 D17 D17 ."
+  "D18 D18 D18 D18 . ."
+  "D19 D19 D19 D19 D19 ."
+  "D20 D20 D20 D20 . ."
+  "D21 D21 D21 D21 . ."
+  "D22 D22 . . . ."
+  "D23 . . . . ."
+  "D24 D24 D24 . . ."
+  "D25 D25 D25 D25 . ."
+  "D26 D26 D26 D26 . ."
+  "D27 D27 D27 D27 . ."
+  "D28 D28 D28 D28 D28 ."
+  "D29 D29 D29 D29 . ."
+  "D30 D30 . . . ."
+  "D31 D31 D31 D31 . ."
+  ;
+  @media#{$large}{
+    grid-template-columns: repeat(31, 27px); 
+    grid-template-rows: repeat(6, 1.5rem);
+    grid-template-areas: 
+    ".  .  .  .  .  .  .  .  .  .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   .   ."
+    "D1 D2  .  . .  .  .  .  D9 D10 .   .   .   .   .   .   D17 .   D19 .   .   .   .   .   .   .   .   D28 .   .   ."
+    "D1 D2 D3 D4 .  .  .  D8 D9 D10 D11 D12 .   .   .   D16 D17 D18 D19 D20 D21 .   .   .   D25 D26 D27 D28 D29 .   D31"
+    "D1 D2 D3 D4 .  .  D7 D8 D9 D10 D11 D12 .   .   D15 D16 D17 D18 D19 D20 D21 .   .   D24 D25 D26 D27 D28 D29 .   D31"
+    "D1 D2 D3 D4 D5 .  D7 D8 D9 D10 D11 D12 D13 .   D15 D16 D17 D18 D19 D20 D21 D22 .   D24 D25 D26 D27 D28 D29 D30 D31"
+    "D1 D2 D3 D4 D5 D6 D7 D8 D9 D10 D11 D12 D13 D14 D15 D16 D17 D18 D19 D20 D21 D22 D23 D24 D25 D26 D27 D28 D29 D30 D31";
+    grid-row-gap: 0;
+  }
+  .graph__content {
+    font-size: 0.63rem;
+    line-height: 1.2;
+    display: flex;
+    align-items: center;
+    flex-wrap: nowrap;
+    justify-content: center;
+    @media#{$large}{
+      flex-wrap: wrap-reverse;
+    }
+    @for $i from 1 through 31 {
+      &:nth-child(#{$i}) { grid-area: #{D+$i}; }
+    }
+    .graph__date {
+      display: inline-block;
+      white-space:nowrap;
+      width: 2em;
+      @media#{$large}{
+        transform: rotate(-90deg) scale(1);
+        width: auto;
+      }
+    }
+    .graph__item {
+      border-radius: 50px;
+      width: 100%;
+      height: 12px;
+      display: inline-block;
+      background-color: $other-price;
+      margin-left: 3em;
+      @media#{$large}{
+        width: 1.2em;
+        height: 100%;
+        margin-bottom: 24px;
+        margin-left: auto;
+      }
+      &.low-price {
+        background-color: $lowest-price;
+      }
+    }
+  }
+} 
+
+.graph__description {
+  padding: var(--space-normal);
+  @media#{$large} {
+    padding: 0;   
+  }
+}
+
+.graph__background {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 9rem;
+  box-sizing: border-box;
+  pointer-events: none;
+  @media#{$large}{
+    padding: var(--space-md) 6em 0 9em;
+  }
+  .graph__background-lines {
+    height: 1px;
+    width: 100%;
+    background-color: rgba($gray, .1);
+    display: block;
+    pointer-events: none;
+    &:not(:last-of-type) {
+      margin-bottom: 1.4rem;
+    } 
+  }
+}
+
+.graph__pointer {
+  position: absolute;
+  display: flex;
+  align-items: center;
+  width: 94%;
+  left: 3%;
+  top: 9.3rem;
+  .graph__lowest-price--tooltip {
+    background-color: $lowest-price;
+    padding: .6em;
+    font-size: 0.8rem;
+    line-height: 1.2;
+    color: $white;
+    white-space: nowrap;
+  }
+  .graph__lowest-price--line {
+    width: 100%;
+    height: 1px;
+    background-color: $lowest-price;
+    display: block;
+  }
+}

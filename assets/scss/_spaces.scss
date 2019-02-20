@@ -1,0 +1,13 @@
+:root {
+    --space-unit: 15px;
+    --space-xxs:  calc(0.333 * var(--space-unit)); // 5px
+    --space-xs:   calc(0.666 * var(--space-unit));  // 10px
+    --space-sm:   calc(1 * var(--space-unit)); // 15px
+    --space-normal:   calc(2 * var(--space-unit)); // 30px
+    --space-md:   calc(3 * var(--space-unit)); // 45px
+    --space-lg:   calc(4 * var(--space-unit));    // 60px
+    --space-xl:   calc(6 * var(--space-unit)); // 90px
+    --space-xxl:  calc(8 * var(--space-unit)); // 120px
+    --space-giant:  calc(10 * var(--space-unit)); // 150px
+    --space-extra-giant:  calc(12 * var(--space-unit)); // 180px
+}

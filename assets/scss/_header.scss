@@ -4,11 +4,20 @@
   height: 80vh;
   min-height: 690px;
   padding: 2em 0;
+  position: relative;
   @media#{$large}{
     height: 30vh;
     max-height: 400px;
     min-height: auto;
     padding: 2em 0 6em;
+  }
+  .header-search__overlay {
+    height: 100%;
+    width: 100%;
+    background-color: rgba($black, 0.5);
+    position: absolute;
+    top: 0;
+    left: 0;
   }
   .header-search__title {
     text-align: center;
@@ -67,8 +76,9 @@
     label.input__label {
       text-transform: uppercase;
       font-size: 0.8rem;
-      line-break: 1.2;
+      line-height: 1.2;
       color: $gray;
+      width: 100%;
     }
     input.input__item {
       border: none;
@@ -87,7 +97,7 @@
       width: 100%;
       border-radius: 0 0 6px  6px;
       @media#{$large}{
-        width: auto;   
+        width: auto;
         border-radius: 0 6px 6px 0;
       }
       img {

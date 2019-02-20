@@ -1,5 +1,5 @@
 # "Escapate a Nueva York"
-This is a technical test for **Avantrip**. In this it is intended that the developer achieve a responsive layout that includes a search engine and a bar graph.
+This is a technical test for **Avantrip**. In this test, it is intended that the developer achieves a responsive layout that includes a search engine and a bar graph.
 
 ## Technologies
  - HTML5

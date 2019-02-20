@@ -6,3 +6,5 @@ This is a technical test for **Avantrip**. In this it is intended that the devel
  - CSS3
  - SASS
  - Javascript / jQuery 3.3.1
+ 
+ [Live Version](https://alotama.github.io/avantrip-test/)
